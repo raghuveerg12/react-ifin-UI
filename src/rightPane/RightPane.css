@@ -1,0 +1,114 @@
+
+.rightpane{
+    width: 29%;
+    height: 80%;
+    display: inline-block;
+    margin: 0px;
+    float: left;
+  }
+
+
+  
+.buyAndSell{
+    width:  100%;
+    height: 40%; 
+    border: 1px solid #CCC;
+
+}
+.markets{
+  padding: 0px, 50px,50px,0px;
+  width: 100%;
+  height: 10%;
+  text-align: left;
+
+}
+
+.bTCNETH{
+   width:  100%;
+    height: 50%;
+    border: 1px solid #CCC;
+
+}
+
+.buyNSellTabs{
+    width: 33.3%;
+    height: 25px;
+    background-color: #ccc;
+    font: 12px arial, sans-serif;
+    border:none;
+    margin: 0px;
+    font-weight: bold;
+    border:1px solid white;
+
+}
+
+.buyNSellArea{
+  width: 49.3%;
+  display: inline-block;
+  margin: 0px;
+}
+
+.btcEthButton{
+    width: 50%;
+    height: 25px;
+    background-color: #ccc;
+    font: 12px arial, sans-serif;
+    border:none;
+    font-weight: bold;
+    
+
+}
+
+.inputPriceAmount {
+    width: 80px;
+    background-color: #C0C0C0;
+    border: none;
+  }
+  
+  .inputPriceAmount2{
+    width: 30px;
+    background-color: #C0C0C0;
+    border: none;
+    margin-left: 2px;
+  }
+  
+  .inputTotal{
+  width: 80px;
+    background-color: white;
+    border: none;
+  
+  }
+  .inputTotal2{
+    width: 30px;
+    background-color: white;
+    border: none;
+  
+  }
+  
+  .buttonSell{
+  
+    margin-top:15px;
+    margin-bottom: 5px;
+    margin-left:7px; 
+    width: 170px; 
+    height: 27px; 
+    background-color: #CCCC00; 
+    color: white;
+    border:none;
+    padding: 2px;
+  }
+  
+  .buttonBuy{
+  
+  
+    margin-top:15px;
+    margin-left:7px;  
+    margin-bottom: 5px;
+    width: 170px; 
+    height: 27px;  
+    background-color: #800080; 
+    color: white;
+    border:none;
+    padding: 2px
+  }
+  

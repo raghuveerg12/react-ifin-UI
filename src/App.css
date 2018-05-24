@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+
+
+/* Change background color of buttons on hover */
+.buttonsDiv button:hover {
+  background-color: #ccc;
+}
+
+/* Create an active/current tablink class */
+.buttonsDiv button.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+.buttonsDiv{
+
+  width: 100%;
+  height: 10%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  font-size: xx-small;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+label {
+  font-size:small;
+  float: left;
+  text-align:right;
+  margin-right: 10px;
+  width:35px;
+}
+span {
+     margin-top:10px;
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px;
+    margin-bottom:5px;
+}
+
+
+

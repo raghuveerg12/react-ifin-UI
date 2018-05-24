@@ -1,0 +1,59 @@
+
+.headerpane{
+    width:99%;
+    height: 40px;
+    margin: 0px 3px 15px 2px;
+  }
+  .commonLinks{
+    display: inline-block;
+    width: 84.5%;
+    height: 35.5px;
+    margin-right: 2px;
+    text-align: center
+  }
+  .commonLinksButton{
+    width: 10%;
+    height: 35px;
+    display: inline-block; 
+    background-color: black;
+    float: left;
+    border: none;
+    color: white;
+    text-align: center;
+  
+  }
+  
+  
+  .headerLogo{
+    width: 10%;
+    display: inline-block;
+    height: 35px;
+    text-align: left;
+    
+    margin: 0px 5px 0px 0px;
+    padding: 2px 0px 2px 0px;
+  
+  }
+  
+  .burgerMenuLinks{
+    display: inline-block;
+    width: 60px;
+    padding: 0px;
+    margin: 0px
+    }
+  
+  .burgerMenu{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 5px 6px 5px; 	
+     
+     
+  
+      
+  }
+  .burgerMenuAd{
+    background-color:yellowgreen;
+    border:1px solid;
+    
+  }
