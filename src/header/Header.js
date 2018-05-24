@@ -45,7 +45,7 @@ import './Header.css';
          
               
                <button onClick={this.handleClick}>slot</button>
-            <Link to="/Help">Help</Link>
+          
               <Route path="/Help" exact Component={Help} />
             
      

@@ -15,7 +15,7 @@ class App extends Component {
     return (
     
         <div className="App">
-        <Link to="/fuck">test</Link>
+      
              
               <div className="headerpane">
 
@@ -29,7 +29,7 @@ class App extends Component {
 
                   <Rightpane/>
               </div>
-              <Route  path="/fuck" exact Component={Test} />
+             
           </div>
        
     );
