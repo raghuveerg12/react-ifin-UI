@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Route,Link} from 'react-router-dom';
-//import { hashHistory } from 'react-router';
-import Help from '../help/Help';
+import { Link, withRouter } from 'react-router-dom';
 import './Header.css';
 
  class Header extends Component{
@@ -13,12 +11,10 @@ import './Header.css';
             </div>
               
               <div className="commonLinks">
-                <HeaderLinks/>
+                <HeaderLinksWithRouter/>
               </div>  
   
-              <div className="burgerMenuLinks"> 
-                <BurgerMenu/>
-              </div>
+            
          </div> 
    
       );
@@ -28,28 +24,44 @@ import './Header.css';
   
   class HeaderLinks extends Component{
     constructor(props) {
-      console.log(props)
       super(props);
       this.handleClick = this.handleClick.bind(this);
     }
     
   
     handleClick(e) {
-
       e.preventDefault();
-      this.props.hashHistory.push('/Help');
+      this.props.history.push('/help');
     }
     render(){
       return(
         <div>
-         
-              
-               <button onClick={this.handleClick}>slot</button>
-          
-              <Route path="/Help" exact Component={Help} />
-            
-     
+              {/* <button onClick={this.handleClick}>Slot</button>
+            <Link to="/help">Help</Link> */}
+            <div className="headerLinks" >
+                <button className="commonLinksButton" onClick={this.handleClick}>Slot</button>
+
+              </div>
+              <div className="headerLinks" >
+              <button className="commonLinksButton" onClick={this.handleClick}>Forward</button>
+
+              </div>
+              <div className="headerLinks">
+              <button className="commonLinksButton" onClick={this.handleClick}>Swap</button>
+
+
+              </div>
+              <div className="headerLinks">
+              <button className="commonLinksButton" onClick={this.handleClick}>Binary</button>
+
+
+              </div>
+              <div className="headerLinks">
+              <button className="commonLinksButton" onClick={this.handleClick}>Loan</button>
+
+              </div>
              
+
         </div>
   
       );
@@ -57,20 +69,8 @@ import './Header.css';
       
     }
   }
+
+  const HeaderLinksWithRouter = withRouter(HeaderLinks)
   
-  class BurgerMenu extends Component {
-  
-    render() {
-      return (
-        <div className="burgerMenuAd">
-          <div className="burgerMenu"></div>
-          <div className="burgerMenu"></div>
-          <div className="burgerMenu"></div>
-  
-         </div> 
-   
-      );
-    }
-  }
 
   export default Header;

@@ -42,7 +42,7 @@ label {
   margin-right: 10px;
   width:35px;
 }
-span {
+.leftpane span, .rightpane span {
      margin-top:10px;
     display: block;
     overflow: hidden;

@@ -73,16 +73,16 @@ class BuyAndSell extends Component {
         marketBuySellDiv=( 
         <div>
          <div id="buy" className="buyNSellArea">
-                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" value="BTH" /></span>
-                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" value="ETH" /></span>
-                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" value="ETH" /></span>
+                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" defaultValue="BTH" /></span>
+                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" defaultValue="ETH" /></span>
+                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" defaultValue="ETH" /></span>
                
                 <button className="buttonBuy">BUY</button>
             </div>
             <div id="sell" className="buyNSellArea">
-                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" value="BTH" /></span>
-                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" value="ETH" /></span>
-                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" value="ETH" /></span>
+                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" defaultValue="BTH" /></span>
+                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" defaultValue="ETH" /></span>
+                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" defaultValue="ETH" /></span>
                
   
                 <button className="buttonSell">Sell</button>
@@ -95,16 +95,16 @@ class BuyAndSell extends Component {
         limitBuySellDiv=( 
         <div>
          <div id="buy" className="buyNSellArea">
-                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" value="BTH" /></span>
-                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" value="ETH" /></span>
-                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" value="ETH" /></span>
+                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" defaultValue="BTH" /></span>
+                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" defaultValue="ETH" /></span>
+                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" defaultValue="ETH" /></span>
                
                 <button className="buttonBuy">BUY</button>
             </div>
             <div id="sell" className="buyNSellArea">
-                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" value="BTH" /></span>
-                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" value="ETH" /></span>
-                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" value="ETH" /></span>
+                <span><label >Price</label><input   name="price"  className="inputPriceAmount" id="pricetext" type="text" /><input   name="BTH"  className="inputPriceAmount2"  type="text" defaultValue="BTH" /></span>
+                <span><label >Amount</label><input name="amount" className="inputPriceAmount" id="amountText" type="text" /><input   name="ETH"  className="inputPriceAmount2"  type="text" defaultValue="ETH" /></span>
+                <span><label >Total</label><input name="total" className="inputTotal" id="totalText" type="text" /><input   name="ETH2"  className="inputTotal2"  type="text" defaultValue="ETH" /></span>
                
   
                 <button className="buttonSell">Sell</button>
