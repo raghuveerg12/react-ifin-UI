@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+
+<html>
+<style type="text/css">
+<!--
+-->
+.header {
+	width: 100%;
+	height: 10%;
+}
+
+.headerElements {
+	display: inline-block;
+	float: left;
+	width: 10%
+}
+
+.body {
+	width: 100%;
+	height: 80%;
+}
+
+.leftBody {
+	width: 75%;
+	height: 60%;
+	display: inline-block;
+	float: left;
+}
+
+.rightBody {
+	width: 24%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.bottomBody {
+	width: 75%;
+	height: 40%;
+}
+
+.commonBody {
+	display: inline-block;
+	float: left;
+}
+
+.titleBody {
+	width: 15%
+}
+
+.titleHeaderBody {
+	width: 20%
+}
+
+.pairInfo {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 98%;
+}
+
+.price {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	background-color: gray;
+	width: 49%;
+}
+
+.marketDepth {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 49%;
+}
+
+.analysisSpace {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 50;
+}
+
+.buyOrder {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 33%;
+	background-color: gray;
+}
+
+.sellOrder {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+
+.analysisSpaceforOrder {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 50%;
+}
+
+.limitstop {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+
+.buysell {
+	
+	text-align:justify;
+	width: 49%;
+	padding-left: 3px; 
+}
+
+.analysisSpaceforMrkt {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 75%;
+}
+
+.tradeMarketHistory {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 50%;
+}
+
+.anaysisSpaceForHistory {
+	display: inline-block;
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 20%;
+}
+
+.footer {
+	width: 100%;
+	height: 10%;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	font-size: small;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 10px 12px;
+	margin-bottom:10px;
+	transition: 0.3s;
+	font-size: small;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ccc;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ddd;
+	font-weight: bold;
+}
+
+/* Style the tab content */
+.tabcontent {
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.tabcontentRightLower {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.tabcontentOrders {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.tabcontenttradeMarketHistory {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+label {
+	font-size:small;
+	float: left;
+	text-align:right;
+	margin-right: 10px;
+	width:35px;
+}
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+.inputPriceAmount {
+	width: 80px;
+	background-color: #C0C0C0;
+	border: none;
+}
+.inputTotal{
+width: 50px;
+	background-color: white;
+	border: none;
+
+}
+</style>
+<body class="body">
+	<div id="header" class="header"></div>
+	<div id="body" class="body">
+		<div id="leftBody" class="leftBody">
+			<div>
+				<div id="pairInfo" class="commonBody pairInfo">
+					<div id="titleHead" class="commonBody titleHeaderBody">
+						<div style="font: 15px arial, sans-serif; font-weight: bold;">Ethereum
+							Exchange</div>
+						<div style="text-align: right;">eth/btc</div>
+					</div>
+					<div id="lastPrice" class="commonBody titleBody">
+						<div style="font: 11px arial, sans-serif; font-weight: lighter;">Last
+							Price</div>
+						<div
+							style="text-align: center; font: 15px arial, sans-serif; font-weight: bold;">0.000012</div>
+					</div>
+					<div id="changePrice" class="commonBody titleBody">
+						<div style="font: 11px arial, sans-serif; font-weight: lighter;">24Hr
+							Change</div>
+						<div
+							style="text-align: center; font: 15px arial, sans-serif; font-weight: bold;">0.000012</div>
+					</div>
+					<div id="highPrice" class="commonBody titleBody">
+						<div style="font: 11px arial, sans-serif; font-weight: lighter;">24Hr
+							High</div>
+						<div
+							style="text-align: center; font: 15px arial, sans-serif; font-weight: bold;">0.000012</div>
+					</div>
+					<div id="lowPrice" class="commonBody titleBody">
+						<div style="font: 11px arial, sans-serif; font-weight: lighter;">24Hr
+							Low</div>
+						<div
+							style="text-align: center; font: 15px arial, sans-serif; font-weight: bold;">0.000012</div>
+					</div>
+					<div id="volumePrice" class="commonBody titleBody">
+						<div style="font: 11px arial, sans-serif; font-weight: lighter;">24Hr
+							Volume</div>
+						<div
+							style="text-align: center; font: 15px arial, sans-serif; font-weight: bold;">0.000012</div>
+					</div>
+				</div>
+            </div>
+            
+            <div id="app"></div>
+
+
+		</div>
+		<div id="rightBody" class="rightBody">
+			<div id="rightUpperbody" class="commonBody tab"
+				style="padding: 0px; border: 1px solid gray; margin: 5px; width: 98%;height: 50%;">
+				<button class="tablinkslimitstop" style="width: 33%"
+					onclick="openlimitstopTab(event, 'Market')"
+					id="defaultOpenlimitstop">Market</button>
+				<button class="tablinkslimitstop" style="width: 33%"
+					onclick="openlimitstopTab(event, 'Limit')">Limit</button>
+				<button class="tablinkslimitstop" style="width: 33%"
+					onclick="openlimitstopTab(event, 'Stop')">Stop</button>
+
+				<div id="Market" class="tabcontentlimitstop">
+					<div class="commonBody" style="width: 50% ;height: 100%">
+						<div style="margin-top: 10px">
+							<span><label >Price</label><input   name="price"  class="inputPriceAmount" id="pricetext" type="text" /></span>
+							
+						</div>
+						<div style="margin-top: 10px">
+							
+							<span><label >Amount</label><input name="amount" class="inputPriceAmount" id="amountText" type="text" /></span>
+						</div>
+						<div style="margin-top: 10px">
+							
+							<span><label >Total</label><input name="total" class="inputTotal" id="totalText" type="text" /></span>
+							
+						</div >
+						<div id="buy" class="commonBody buysell" >
+							<button id="buyButton" style="margin-top:15px;margin-left:7px;  margin-bottom: 5px;width: 120px; height: 27px;  background-color: #800080; font-weight; color: white;padding: 2px">Buy</button>
+						</div>
+					</div >
+					<div class="commonBody" style="width: 50% ;">
+						<div style="margin-top: 10px">
+							<span><label >Price</label><input   name="price" class="inputPriceAmount" id="pricetext" type="text" /></span>
+							
+						</div>
+						<div style="margin-top: 10px">
+							
+							<span><label >Amount</label><input name="amount" class="inputPriceAmount" id="amountText" type="text" /></span>
+						</div>
+						<div style="margin-top: 10px">
+							
+							<span><label >Total</label><input name="total" class="inputTotal" id="totalText" type="text" /></span>
+							
+						</div>
+						
+						<div id="sell" class="commonBody buysell">
+							<button id="sellButton"
+							style="margin-top:15px;margin-bottom: 5px;margin-left:7px; width: 120px; height: 27px; background-color: #CCCC00; color: white;padding: 2px">Sell</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="Limit" class="tabcontentlimitstop">
+					<div class="commonBody" style="width: 50% ">
+						price
+						Amount
+						<div id="buy" class="commonBody buysell" >
+							<button id="buyButton"
+							style="margin-bottom: 5px; width: 120px; height: 27px; background-color: #800080; font-weight; color: white;padding: 2px">Buy</button>
+						</div>
+					</div >
+					<div class="commonBody" style="width: 50% ">
+						Price
+						Amount
+						<div id="sell" class=" buysell">
+							<button id="sellButton"
+							style="margin-bottom: 5px; width: 120px; height: 27px; background-color: #CCCC00; color: white;padding: 2px">Sell</button>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div>
+				<h5>Markets</h5>
+			</div>
+			<div id="rightLowerbody" class="commonBody tab"
+				style="padding: 0px; border: 1px solid gray; margin: 5px; width: 98%">
+
+				<button class="tablinksRightLower" style="width: 50%;"
+					onclick="openRightTab(event, 'BTC')" id="defaultBTCOpen">BTC</button>
+				<button class="tablinksRightLower" style="width: 50%;"
+					onclick="openRightTab(event, 'ETH')">ETH</button>
+
+				<div id="BTC" class="tabcontentRightLower" style="width: 100%;">
+					<table>
+						<tr>
+							<th>coins</th>
+							<th>Price</th>
+							<th>Volume</th>
+							<th>Change</th>
+							<th>Name</th>
+						</tr>
+						<tr>
+							<td>ETH</td>
+							<td>0.00004</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>Ethereum</td>
+						</tr>
+						<tr>
+							<td>ADL</td>
+							<td>0.0000476</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>Adel</td>
+						</tr>
+						<tr>
+							<td>IFIN</td>
+							<td>0.0000476</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>IFIN</td>
+						</tr>
+
+					</table>
+				</div>
+				<div id="ETH" class="tabcontentRightLower" style="width: 100%;">
+					<table>
+						<tr>
+							<th>coins</th>
+							<th>Price</th>
+							<th>Volume</th>
+							<th>Change</th>
+							<th>Name</th>
+						</tr>
+						<tr>
+							<td>ETH</td>
+							<td>0.0000476</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>Ethereum</td>
+						</tr>
+						<tr>
+							<td>ADL</td>
+							<td>0.0000476</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>Adel</td>
+						</tr>
+						<tr>
+							<td>IFIN</td>
+							<td>0.0000476</td>
+							<td>0.0000476</td>
+							<td>+3.20</td>
+							<td>IFIN</td>
+						</tr>
+
+					</table>
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div class="bottomBody">
+		<div class="commonBody tab"
+			style="padding: 0px; border: 1px solid gray; margin: 5px; width: 48%">
+			<button class="tablinksOrders" style="width: 33%;"
+				onclick="openOrdersTab(event, 'BuyOrder')" id="defaultBuyOrderOpen">BuyOrder</button>
+			<button class="tablinksOrders" style="width: 33%;"
+				onclick="openOrdersTab(event, 'SellOrders')">SellOrders</button>
+			<button class="tablinksOrders" style="width: 33%;"
+				onclick="openOrdersTab(event, 'MyOrders')">MyOrders</button>
+
+			<div id="BuyOrder" class="tabcontentOrders">
+				<table>
+					<tr>
+						<th>price</th>
+						<th>eth</th>
+						<th>btc</th>
+						<th>sum(BTC)</th>
+					</tr>
+					<tr>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+					</tr>
+					<tr>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+					</tr>
+
+				</table>
+			</div>
+			<div id="SellOrders" class="tabcontentOrders">
+				<table>
+					<tr>
+						<th>price</th>
+						<th>eth</th>
+						<th>btc</th>
+						<th>sum(BTC)</th>
+					</tr>
+					<tr>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+					</tr>
+					<tr>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+						<td>0.0000476</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+
+		<div class="commonBody tab"
+			style="padding: 0px; border: 1px solid gray; margin: 5px; width: 49%;">
+			<button class="tablinkstradeMarketHistory" style="width: 50%;"
+				onclick="openTradeMarketTab(event, 'TradeHistory')"
+				id="defaultTradeHistoryOpen">TradeHistory</button>
+
+			<button class="tablinkstradeMarketHistory" style="width: 50%;"
+				onclick="openTradeMarketTab(event, 'MarketHistory')">MarketHistory</button>
+
+			<div id="TradeHistory" class="tabcontenttradeMarketHistory">
+
+				<table>
+					<tr>
+						<th>Date</th>
+						<th>Type</th>
+						<th>Price</th>
+						<th>Amount(ETH)</th>
+						<th>Total(BTC)</th>
+					</tr>
+					<tr>
+						<td>18 Apr 9</td>
+						<td>Buy</td>
+						<td>0.00003</td>
+						<td>0.00003</td>
+						<td>0.00003</td>
+					</tr>
+
+				</table>
+			</div>
+			<div id="MarketHistory" class="tabcontenttradeMarketHistory">
+
+				<table>
+					<tr>
+						<th>Date</th>
+						<th>Type</th>
+						<th>Price</th>
+						<th>Amount(ETH)</th>
+						<th>Total(BTC)</th>
+					</tr>
+					<tr>
+						<td>18 Apr 9</td>
+						<td>Buy</td>
+						<td>0.0000345</td>
+						<td>0.0000345</td>
+						<td>0.0000345</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer"></div>
+
+
+	<script type="text/javascript">
+		function openTab(evt, tabname) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(tabname).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		function openRightTab(evt, tabname) {
+			var i, tabcontent, tablinks;
+			tabcontent = document
+					.getElementsByClassName("tabcontentRightLower");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinksRightLower");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(tabname).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		function openTradeMarketTab(evt, tabname) {
+			var i, tabcontent, tablinks;
+			tabcontent = document
+					.getElementsByClassName("tabcontenttradeMarketHistory");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document
+					.getElementsByClassName("tablinkstradeMarketHistory");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(tabname).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+		function openOrdersTab(evt, tabname) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontentOrders");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinksOrders");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(tabname).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		function openlimitstopTab(evt, tabname) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontentlimitstop");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinkslimitstop");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(
+						" active", "");
+			}
+			document.getElementById(tabname).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		//document.getElementById("defaultOpen").click();
+		document.getElementById("defaultBTCOpen").click();
+		document.getElementById("defaultTradeHistoryOpen").click();
+		document.getElementById("defaultBuyOrderOpen").click();
+		document.getElementById("defaultOpenlimitstop").click();
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script type="text/babel">
+        const styles = {
+            padding: 0,
+            border: '1px solid gray',
+            margin: '5px'
+        };
+        const w = {
+            width: '50%'
+        }
+      class MidBody extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                tab: 'left'
+            }
+        }
+        changeTab(t) {
+            this.setState({
+                tab: t
+            })
+        }
+        render(){
+            return (
+                <div style={styles} id="midbody" className="commonBody pairInfo">
+                    <div className="tab">
+                        <button className={this.state.tab === 'left'? 'tablinks active' : 'tablinks'} style={w} onClick={() => this.changeTab('left')}>Price</button>
+                        <button className={this.state.tab === 'right'? 'tablinks active' : 'tablinks'} style={w} onClick={() => this.changeTab('right')}>Depth</button>
+                        {
+                            this.state.tab === 'left' ? 
+                                (
+                                    <div id="Price" className="tabcontent">
+                                        <h3>Price</h3>
+                                        <p>Price analysis space</p>
+                                    </div>
+                                )
+                            :
+                        
+                                (
+                                    <div id="Depth" className="tabcontent">
+                                        <h3>depth</h3>
+                                        <p>depth analysis space</p>
+                                    </div>
+                                )
+                          
+                        }
+                    </div>
+                </div>
+            );
+        };
+    };
+      ReactDOM.render(<MidBody />, document.getElementById("app"));
+
+    </script>
+</body>
+</html>
